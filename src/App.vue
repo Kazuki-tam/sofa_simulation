@@ -1,12 +1,24 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <header class="st-header">
+      <nav>
+        <div id="nav">
+          <router-link to="/">ホーム</router-link>
+          <router-link to="/about">シミュレーション</router-link>
+        </div>
+      </nav>
+    </header>
     <router-view/>
   </div>
 </template>
+
+<script>
+import 'normalize.css'
+
+export default {
+  name: 'App'
+}
+</script>
 
 <style lang="scss">
 #app {
@@ -16,13 +28,23 @@
   text-align: center;
   color: #2c3e50;
 }
+
+.st-header {
+  background: #42b983;
+}
+
 #nav {
-  padding: 30px;
+  padding: 1rem;
   a {
     font-weight: bold;
-    color: #2c3e50;
+    display: inline-block;
+    color: #ffffff;
+    &:first-child {
+      margin-right: 1rem;
+    }
     &.router-link-exact-active {
-      color: #42b983;
+      font-weight: bold;
+      text-decoration: none;
     }
   }
 }
