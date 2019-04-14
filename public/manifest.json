@@ -1,6 +1,6 @@
 {
-  "name": "simulatuin_app",
-  "short_name": "simulatuin_app",
+  "name": "PWA体験",
+  "short_name": "PWA体験",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "./index.html",
+  "start_url": "https://ordersofa-sample.netlify.com/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#4DBA87"
