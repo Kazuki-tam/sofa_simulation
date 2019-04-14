@@ -1,7 +1,9 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="ShowRoom"/>
+    <div class="tp-main_img">
+      <img alt="" src="../assets/top_illust.svg">
+    </div>
+    <HelloWorld msg="PWAサンプルアプリ"/>
   </div>
 </template>
 
@@ -16,3 +18,14 @@ export default {
   }
 }
 </script>
+
+<style scoped lang="scss">
+.tp-main_img {
+  width: 80%;
+  margin: 4rem auto;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>

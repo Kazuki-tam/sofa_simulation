@@ -21,6 +21,7 @@ export default {
 </script>
 
 <style lang="scss">
+// 共通パーツ
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -32,10 +33,6 @@ export default {
 
 .st-header {
   background: #42b983;
-}
-
-.tp-heaer_icon {
-  font-size: 1.2rem;
 }
 
 #nav {
@@ -53,4 +50,12 @@ export default {
     }
   }
 }
+.sm-option_title {
+  color: #fff;
+}
+// トップページアイコン
+.tp-heaer_icon {
+  font-size: 1.2rem;
+}
+
 </style>

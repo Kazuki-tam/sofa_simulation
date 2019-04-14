@@ -1,12 +1,15 @@
 <template>
   <section>
       <div class="sm-leg-option">
-        <h2>脚タイプ</h2>
+        <h2 class="sm-option_title">脚タイプ</h2>
         <ul class="sm-leg-option_list">
           <li v-on:click="leg01Select" class="sm-leg-option_item sw-btn_darkbrown">ダーク<br>ブラウン</li>
           <li v-on:click="leg02Select" class="sm-leg-option_item sw-btn_ashgray">アッシュ<br>グレイ</li>
         </ul>
-        <div v-on:click="btnClose" class="sm-btn_close">閉じる</div>
+        <div v-on:click="btnClose" class="sm-btn_close">
+          <div class="sm-btn_close_line"></div>
+          <div class="sm-btn_close_line"></div>
+        </div>
       </div>
     </section>
 </template>
@@ -21,9 +24,11 @@ export default {
   methods: {
     leg01Select: function () {
       this.$parent.legImg = 'leg01.png'
+      this.$parent.leg = 'ダークブラウン'
     },
     leg02Select: function () {
       this.$parent.legImg = 'leg02.png'
+      this.$parent.leg = 'アッシュグレイ'
     },
     btnClose: function () {
       this.$parent.legActive = false
@@ -34,13 +39,30 @@ export default {
 
 <!-- カバー色選択 CSSカプセル化 -->
 <style scoped lang="scss">
-.sm-leg-option {
-  position: relative;
-}
+// シミュレーション開閉
 .sm-btn_close {
   position: absolute;
-  top: 0;
+  top: -2.8rem;
+  right: 1.6rem;
+}
+.sm-btn_close_line {
+  width: 2rem;
+  height: 2px;
+  position: absolute;
+  top: 2rem;
+  bottom: 0;
   right: 0;
+  left: 0;
+  background: #ffffff;
+  &:nth-child(1) {
+    transform:translateY(0) rotate(-45deg);
+  }
+  &:nth-child(2) {
+   transform:translateY(0) rotate(45deg);
+  }
+}
+.sm-leg-option {
+  position: relative;
 }
 .sm-leg-option_list {
   list-style: none;

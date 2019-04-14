@@ -1,13 +1,16 @@
 <template>
   <section>
       <div class="sm-bg-option">
-        <h2>背景</h2>
+        <h2 class="sm-option_title">背景</h2>
         <ul class="sm-bg-option_list">
           <li v-on:click="bg01Select" class="sm-bg-option_item sm-bg01">ウッディー</li>
           <li v-on:click="bg02Select" class="sm-bg-option_item sm-bg02">ストリート</li>
           <li v-on:click="bg03Select" class="sm-bg-option_item sm-bg03">エレガント</li>
         </ul>
-        <div v-on:click="btnClose" class="sm-btn_close">閉じる</div>
+        <div v-on:click="btnClose" class="sm-btn_close">
+          <div class="sm-btn_close_line"></div>
+          <div class="sm-btn_close_line"></div>
+        </div>
       </div>
     </section>
 </template>
@@ -38,13 +41,30 @@ export default {
 
 <!-- 背景選択 CSSカプセル化 -->
 <style scoped lang="scss">
-.sm-bg-option {
-  position: relative;
-}
+// 共通パーツ シミュレーション開閉
 .sm-btn_close {
   position: absolute;
-  top: 0;
+  top: -2.8rem;
+  right: 1.6rem;
+}
+.sm-btn_close_line {
+  width: 2rem;
+  height: 2px;
+  position: absolute;
+  top: 2rem;
+  bottom: 0;
   right: 0;
+  left: 0;
+  background: #ffffff;
+  &:nth-child(1) {
+    transform:translateY(0) rotate(-45deg);
+  }
+  &:nth-child(2) {
+   transform:translateY(0) rotate(45deg);
+  }
+}
+.sm-bg-option {
+  position: relative;
 }
 .sm-bg-option_list {
   list-style: none;

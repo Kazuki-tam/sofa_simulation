@@ -7,18 +7,30 @@
     <div class="sm-detail">
       <p class="sm-detail_cover">カバー色：{{ cover }}</p>
       <p class="sm-detail_leg">脚タイプ：{{ leg }}</p>
-      <p class="sm-detail_price">価格：&yen;{{ price[1] }}</p>
+      <p class="sm-detail_price">価格：<span>&yen;{{ price | numDelimiter }}</span></p>
     </div>
-    <ColorOption class="selectOption" v-show="coverActive" v-bind:color-img="colorImg" />
-    <LegOption class="selectOption" v-show="legActive" v-bind:leg-img="legImg" />
-    <BgOption class="selectOption" v-show="roomActive" v-bind:bg-img="bgImg" />
+    <transition>
+      <ColorOption class="selectOption" v-show="coverActive" v-bind:color-img="colorImg" />
+    </transition>
 
+    <transition>
+      <LegOption class="selectOption" v-show="legActive" v-bind:leg-img="legImg" />
+    </transition>
+
+    <transition>
+      <BgOption class="selectOption" v-show="roomActive" v-bind:bg-img="bgImg" />
+    </transition>
+    
     <div class="sm-option">
       <ul class="sm-option_list">
         <li class="sm-option_item"><a href="#" v-on:click="coverOptions" class="sm-option_btn"><font-awesome-icon icon="palette" class="icon" /> カバー色</a></li>
         <li class="sm-option_item"><a href="#" v-on:click="legOptions" class="sm-option_btn"><font-awesome-icon icon="couch" class="icon" /> 脚タイプ</a></li>
         <li class="sm-option_item"><a href="#" v-on:click="roomOptions" class="sm-option_btn"><font-awesome-icon icon="street-view" class="icon" /> 背景</a></li>
       </ul>
+    </div>
+
+    <div class="sm-des">
+      <p class="sm-des_text">セミオーダーソファーのシミュレーションサービスを想定して開発しました。シミューレーション 画像、内奥ともに全てサンプルです。</p>
     </div>
   </div>
 </template>
@@ -43,7 +55,7 @@ export default {
       coverActive: false,
       legActive: false,
       roomActive: false,
-      price: [1000, 2000],
+      price: 20000,
       cover: 'レッド',
       leg: 'ダークブラウン'
     }
@@ -64,16 +76,31 @@ export default {
       this.legActive = false;
       this.roomActive = !this.roomActive;
     }
+  },
+  filters: {
+    numDelimiter: function (value) {
+      return value.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1,')
+    }
   }
 }
 </script>
 
 <!-- CSSカプセル化 -->
 <style scoped lang="scss">
+.v-enter-active, .v-leave-active {
+  transition: opacity .5s;
+}
+.v-enter, .v-leave-to {
+  opacity: 0;
+}
+// シミュレーション画像
 .sm-background {
-  // シミュレーション画像
   position: relative;
   padding-top: 60vmin;
+  @media screen and (min-width: 768px) {
+    width: 640px;
+    margin: 0 auto;
+  }
   img {
     width: 100%;
     height: 100%;
@@ -96,11 +123,22 @@ export default {
   left: 0;
   right: 0;
   z-index: 200;
-  background: rgba(255,255,255,0.8);
-  width: 100%;
+  background: rgba(24,30,31,0.4);
+  width: 90%;
+  border-radius: 1rem;
   padding: 5%;
   margin: 0 auto;
   box-sizing: border-box;
+}
+// シミュレーション文言
+.sm-des {
+  width: 80%;
+  margin: 0 auto;
+}
+.sm-des_text {
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 // フッター選択ナビ
 .sm-option_list {
@@ -127,11 +165,23 @@ export default {
   font-size: 1rem;
   color: #ffffff;
   display: inline-block;
+  width: 100%;
+  height: auto;
 }
 .icon {
   font-size: 1.2rem;
 }
 //カバー選択
+.sm-detail_cover, .sm-detail_leg, .sm-detail_price {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.sm-detail_price {
+  span {
+    font-size: 1.4rem;
+    color: #CB2131;
+  }
+}
 .sm-color-option_list {
   list-style: none;
   padding: 0;

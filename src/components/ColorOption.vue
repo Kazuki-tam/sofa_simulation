@@ -1,7 +1,7 @@
 <template>
   <section>
       <div class="sm-color-option">
-        <h2>カバー色</h2>
+        <h2 class="sm-option_title">カバー色</h2>
         <ul class="sm-color-option_list">
           <li v-on:click="redSelect" class="sm-color-option_item sw-btn_red">レッド</li>
           <li v-on:click="turquoiseSelect" class="sm-color-option_item sw-btn_turquoise">ターコイズ</li>
@@ -10,7 +10,10 @@
           <li v-on:click="blueSelect" class="sm-color-option_item sw-btn_blue">ブルー</li>
           <li v-on:click="blackSelect" class="sm-color-option_item sw-btn_black">ブラック</li>
         </ul>
-        <div v-on:click="btnClose" class="sm-btn_close">閉じる</div>
+        <div v-on:click="btnClose" class="sm-btn_close">
+          <div class="sm-btn_close_line"></div>
+          <div class="sm-btn_close_line"></div>
+        </div>
       </div>
     </section>
 </template>
@@ -25,21 +28,32 @@ export default {
   methods: {
     redSelect: function () {
       this.$parent.colorImg = '_red_'
+      this.$parent.cover = 'レッド'
     },
     turquoiseSelect: function () {
       this.$parent.colorImg = '_turquoise_'
+      this.$parent.cover = 'ターコイズ'
+      this.$parent.price = 21000
     },
     orangeSelect: function () {
       this.$parent.colorImg = '_orange_'
+      this.$parent.cover = 'オレンジ'
+      this.$parent.price = 22000
     },
     greenSelect: function () {
       this.$parent.colorImg = '_green_'
+      this.$parent.cover = 'グリーン'
+      this.$parent.price = 23000
     },
     blueSelect: function () {
       this.$parent.colorImg = '_blue_'
+      this.$parent.cover = 'ブルー'
+      this.$parent.price = 24000
     },
     blackSelect: function () {
       this.$parent.colorImg = '_black_'
+      this.$parent.cover = 'ブラック'
+      this.$parent.price = 20000
     },
     btnClose: function () {
       this.$parent.coverActive = false
@@ -50,13 +64,30 @@ export default {
 
 <!-- カバー色選択 CSSカプセル化 -->
 <style scoped lang="scss">
-.sm-color-option {
-  position: relative;
-}
+// 共通パーツ シミュレーション開閉
 .sm-btn_close {
   position: absolute;
-  top: 0;
+  top: -2.8rem;
+  right: 1.6rem;
+}
+.sm-btn_close_line {
+  width: 2rem;
+  height: 2px;
+  position: absolute;
+  top: 2rem;
+  bottom: 0;
   right: 0;
+  left: 0;
+  background: #ffffff;
+  &:nth-child(1) {
+    transform:translateY(0) rotate(-45deg);
+  }
+  &:nth-child(2) {
+   transform:translateY(0) rotate(45deg);
+  }
+}
+.sm-color-option {
+  position: relative;
 }
 .sm-color-option_list {
   list-style: none;
