@@ -26,7 +26,7 @@ export default {
   display: inline-block;
   font-weight: bold;
   text-decoration: none;
-  background: #42b983;
+  background: #34845A;
   color: #ffffff;
   border-radius: 2rem;
   padding: 1rem;

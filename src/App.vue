@@ -34,7 +34,7 @@ export default {
 
 // 共通パーツ ヘッダー
 .st-header {
-  background: #42b983;
+  background: #34845A;
 }
 
 .st-nav {

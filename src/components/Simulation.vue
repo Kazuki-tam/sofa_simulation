@@ -148,7 +148,7 @@ export default {
   position: fixed;
   z-index: 200;
   bottom: 0;
-  background: #42b983;
+  background: #34845A;
   list-style: none;
   padding: 0;
   margin: 0;
