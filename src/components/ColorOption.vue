@@ -29,6 +29,7 @@ export default {
     redSelect: function () {
       this.$parent.colorImg = '_red_'
       this.$parent.cover = 'レッド'
+      this.$parent.price = 20000
     },
     turquoiseSelect: function () {
       this.$parent.colorImg = '_turquoise_'

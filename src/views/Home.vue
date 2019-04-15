@@ -3,7 +3,7 @@
     <div class="tp-main_img">
       <img alt="" src="../assets/top_illust.svg">
     </div>
-    <HelloWorld msg="PWAサンプルアプリ"/>
+    <HelloWorld msg="PWA + Vue.js Sample"/>
   </div>
 </template>
 

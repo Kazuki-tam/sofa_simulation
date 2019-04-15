@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1 class="tp-heading">{{ msg }}</h1>
     <p class="tp-home_text">PWAが持つ機能が体験できる仮想のシミュレーションアプリです。当アプリはSPAを採用し、Vue.jsで開発されています。</p>
     <router-link class="sw-btn" to="/about">シミュレーションスタート <font-awesome-icon icon="chevron-right" class="tp-home_icon" /></router-link>
   </div>
@@ -17,6 +17,11 @@ export default {
 
 <!-- CSSカプセル化 -->
 <style scoped lang="scss">
+.tp-heading {
+  font-size: 2.6rem;
+  font-family: 'Teko', sans-serif;
+  color: #3c9a7b
+}
 .tp-home_text {
   width: 80%;
   margin: 0 auto 2rem auto;
