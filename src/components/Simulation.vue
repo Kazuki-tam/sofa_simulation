@@ -36,9 +36,12 @@
 </template>
 
 <script>
-import ColorOption from '@/components/ColorOption.vue'
-import LegOption from '@/components/LegOption.vue'
-import BgOption from '@/components/BgOption.vue'
+// import ColorOption from '@/components/ColorOption.vue'
+// import LegOption from '@/components/LegOption.vue'
+// import BgOption from '@/components/BgOption.vue'
+const ColorOption = () => import('@/components/ColorOption.vue')
+const LegOption = () => import('@/components/LegOption.vue')
+const BgOption = () => import('@/components/BgOption.vue')
 export default {
   name: 'Simulation',
   components: {

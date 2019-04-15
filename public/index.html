@@ -4,10 +4,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="PWAの機能が体験できるWebアプリケーションです。">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <script async custom-element="amp-install-serviceworker"
+  src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
     <title>ShowRoom Demo</title>
   </head>
   <body>
+    <noscript>
+      あなたのブラウザはJavaScriptが利用できないようです。お手数ですがJavaScript利用できる環境でサービスをご利用ください。
+    </noscript>
     <div id="app"></div>
+    <amp-install-serviceworker
+      src="https://ordersofa-sample.netlify.com/serviceworker.js"
+      layout="nodisplay">
+    </amp-install-serviceworker>
   </body>
 </html>
