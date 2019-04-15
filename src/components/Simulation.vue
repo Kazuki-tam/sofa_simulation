@@ -154,7 +154,7 @@ export default {
 .sm-option_item {
   width: 33.333%;
   border-right: 1px solid #fff;
-  padding: 1rem;
+  padding: 1.4rem 1rem;
   &:last-child {
     border-right: none;
   }
@@ -162,14 +162,14 @@ export default {
 .sm-option_btn {
   text-decoration: none;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 3.8vmin;
   color: #ffffff;
   display: inline-block;
   width: 100%;
   height: auto;
 }
 .icon {
-  font-size: 1.2rem;
+  font-size: 5.2vmin;
 }
 //カバー選択
 .sm-detail_cover, .sm-detail_leg, .sm-detail_price {
