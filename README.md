@@ -1,26 +1,27 @@
 # simulatuin_app
 
-## Project setup
+## プロジェクトのセットアップ
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### 開発時のコンパイルとリロード（ローカルサバー立ち上げ）
 ```
 yarn run serve
+yarn run serve --open
 ```
 
-### Compiles and minifies for production
+### コンパイルと圧縮
 ```
 yarn run build
 ```
 
-### Run your tests
+### テスト
 ```
 yarn run test
 ```
 
-### Lints and fixes files
+### ファイルのLint
 ```
 yarn run lint
 ```
