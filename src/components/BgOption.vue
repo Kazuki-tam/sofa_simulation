@@ -53,7 +53,7 @@ export default {
 }
 .sm-btn_close_line {
   width: 2rem;
-  height: 2px;
+  height: 3px;
   position: absolute;
   top: 2rem;
   bottom: 0;

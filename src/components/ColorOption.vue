@@ -64,7 +64,7 @@ export default {
 
 <!-- カバー色選択 CSSカプセル化 -->
 <style scoped lang="scss">
-// 共通パーツ シミュレーション開閉
+// シミュレーション開閉
 .sm-btn_close {
   position: absolute;
   top: -2.8rem;
@@ -72,7 +72,7 @@ export default {
 }
 .sm-btn_close_line {
   width: 2rem;
-  height: 2px;
+  height: 3px;
   position: absolute;
   top: 2rem;
   bottom: 0;
@@ -99,8 +99,9 @@ export default {
 .sm-color-option_item {
   width: 33%;
   border-radius: 2rem;
-  padding: 0.6rem;
+  padding: 0.8rem 0.6rem;
   margin: 0 0 1rem 0;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 .sw-btn_red {
