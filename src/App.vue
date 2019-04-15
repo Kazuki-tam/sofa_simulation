@@ -2,7 +2,7 @@
   <div id="app">
     <header class="st-header">
       <nav>
-        <div id="nav">
+        <div id="nav" class="st-nav">
           <router-link to="/"><font-awesome-icon icon="home" class="tp-heaer_icon" /> ホーム</router-link>
           <router-link to="/about"><font-awesome-icon icon="vial" class="tp-heaer_icon" /> シミュレーション</router-link>
         </div>
@@ -31,11 +31,12 @@ export default {
   position: relative;
 }
 
+// 共通パーツ ヘッダー
 .st-header {
   background: #42b983;
 }
 
-#nav {
+.st-nav {
   padding: 1rem;
   a {
     font-weight: bold;
