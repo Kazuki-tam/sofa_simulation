@@ -5,7 +5,7 @@
 yarn install
 ```
 
-### 開発時のコンパイルとリロード（ローカルサバー立ち上げ）
+### 開発時のコンパイルとリロード（ローカルサ-バー立ち上げ）
 ```
 yarn run serve
 yarn run serve --open
