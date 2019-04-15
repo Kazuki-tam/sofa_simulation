@@ -18,8 +18,7 @@ export default {
 <!-- CSSカプセル化 -->
 <style scoped lang="scss">
 .tp-heading {
-  font-size: 2.6rem;
-  font-family: 'Teko', sans-serif;
+  font-size: 2rem;
   color: #3c9a7b
 }
 .tp-home_text {
