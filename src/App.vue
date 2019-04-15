@@ -29,6 +29,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   position: relative;
+  padding-bottom: 16vmin;
 }
 
 // 共通パーツ ヘッダー
@@ -53,6 +54,9 @@ export default {
 }
 .sm-option_title {
   color: #fff;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  padding-bottom: .4rem;
 }
 // トップページアイコン
 .tp-heaer_icon {

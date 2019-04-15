@@ -119,7 +119,7 @@ export default {
 }
 .selectOption {
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 0;
   right: 0;
   z-index: 200;

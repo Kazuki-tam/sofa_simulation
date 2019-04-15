@@ -67,7 +67,7 @@ export default {
 // シミュレーション開閉
 .sm-btn_close {
   position: absolute;
-  top: -2.8rem;
+  top: -1.6rem;
   right: 1.6rem;
 }
 .sm-btn_close_line {
