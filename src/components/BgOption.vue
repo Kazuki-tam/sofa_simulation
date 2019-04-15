@@ -6,6 +6,7 @@
           <li v-on:click="bg01Select" class="sm-bg-option_item sm-bg01">ウッディー</li>
           <li v-on:click="bg02Select" class="sm-bg-option_item sm-bg02">ストリート</li>
           <li v-on:click="bg03Select" class="sm-bg-option_item sm-bg03">エレガント</li>
+          <li v-on:click="bg04Select" class="sm-bg-option_item sm-bg04">オーシャン</li>
         </ul>
         <div v-on:click="btnClose" class="sm-btn_close">
           <div class="sm-btn_close_line"></div>
@@ -32,6 +33,9 @@ export default {
     bg03Select: function () {
       this.$parent.bgImg = 'simu_bg03.jpg'
     },
+    bg04Select: function () {
+      this.$parent.bgImg = 'simu_bg04.jpg'
+    },
     btnClose: function () {
       this.$parent.roomActive = false
     }
@@ -41,7 +45,7 @@ export default {
 
 <!-- 背景選択 CSSカプセル化 -->
 <style scoped lang="scss">
-// 共通パーツ シミュレーション開閉
+// シミュレーション開閉
 .sm-btn_close {
   position: absolute;
   top: -2.8rem;
@@ -94,7 +98,7 @@ export default {
     top: 0;
     left: 0;
     background: inherit;
-    filter: brightness(0.8);
+    filter: brightness(0.9);
     z-index: -1;
   }
 }
@@ -107,28 +111,7 @@ export default {
 .sm-bg03 {
   background-image: url('/img/simulation/simu_bg03.jpg');
 }
-.sw-btn_red {
-  background: #CB2131;
-  color: #fff;
-}
-.sw-btn_turquoise {
-  background: #3BBBAF;
-  color: #fff;
-}
-.sw-btn_orange {
-  background: #D75E1B;
-  color: #fff;
-}
-.sw-btn_green {
-  background: #5E9E4F;
-  color: #fff;
-}
-.sw-btn_blue {
-  background: #7B79E4;
-  color: #fff;
-}
-.sw-btn_black{
-  background: #363636;
-  color: #fff;
+.sm-bg04 {
+  background-image: url('/img/simulation/simu_bg04.jpg');
 }
 </style>
