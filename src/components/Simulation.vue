@@ -85,7 +85,7 @@ export default {
 }
 </script>
 
-<!-- CSSカプセル化 -->
+<!--シュミレーション CSSカプセル化 -->
 <style scoped lang="scss">
 .v-enter-active, .v-leave-active {
   transition: opacity .5s;
@@ -119,7 +119,7 @@ export default {
 }
 .selectOption {
   position: absolute;
-  top: 35%;
+  top: 25%;
   left: 0;
   right: 0;
   z-index: 200;
@@ -143,6 +143,7 @@ export default {
 // フッター選択ナビ
 .sm-option_list {
   position: fixed;
+  z-index: 200;
   bottom: 0;
   background: #42b983;
   list-style: none;
