@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1 class="tp-heading">{{ msg }}</h1>
-    <p class="tp-home_text">PWAが持つ機能が体験できる仮想のシミュレーションアプリです。当アプリはSPAを採用し、Vue.jsで開発されています。</p>
+    <p class="tp-home_text">PWA対応した仮想のシミュレーションアプリです。当アプリはSPAを採用し、Vue.jsで開発されています。</p>
     <router-link class="sw-btn" to="/about">シミュレーションスタート <font-awesome-icon icon="chevron-right" class="tp-home_icon" /></router-link>
   </div>
 </template>
