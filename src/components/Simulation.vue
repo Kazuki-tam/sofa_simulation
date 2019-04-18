@@ -148,6 +148,7 @@ export default {
   position: fixed;
   z-index: 200;
   bottom: 0;
+  background: #34845A;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -157,6 +158,7 @@ export default {
 .sm-option_item {
   width: 33.333%;
   border-right: 1px solid #fff;
+  padding: 1.4rem 1rem;
   &:last-child {
     border-right: none;
   }
@@ -169,11 +171,6 @@ export default {
   display: inline-block;
   width: 100%;
   height: auto;
-  padding: 1.4rem 0;
-  background: #34845a;
-  &:focus {
-    background: #42a773;
-  }
 }
 .icon {
   font-size: 5.2vmin;
